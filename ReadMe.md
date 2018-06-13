@@ -5,22 +5,22 @@
 * Nvidia-384.13
 
   ```shell
-  sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-  sudo apt-get install --no-install-recommends libboost-all-dev
-  sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
-  sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+  $> sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+  $> sudo apt-get install --no-install-recommends libboost-all-dev
+  $> sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev
+  $> sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
   ```
 
   ```shell
-  sudo apt-get remove --purge nvidia*
-  sudo apt-get update
+  $> sudo apt-get remove --purge nvidia*
+  $> sudo apt-get update
   ```
   > CTRL+ALT+F1
 
   ```shell
-  sudo service lightdm stop
-  sudo apt-get install nvidia-384
-  nvidia-smi
+  $> sudo service lightdm stop
+  $> sudo apt-get install nvidia-384
+  $> nvidia-smi
   ```
   ![1528892035615](assets/1528892035615.png)	
 
@@ -29,14 +29,17 @@
   Download .run from Web.
 
   ```shell
-  sudo chmod a+u xxxx.run #x is what u download
-  sudo ./xxxx.run
+  $> sudo chmod a+u xxxx.run #x is what u download
+  $> sudo ./xxxx.run
   ```
 
   Configure Path Variable
 
   ```shell
-  sudo vim ~/.bsharc #:wq
+  $> sudo vim ~/.bsharc #:wq
+  ```
+
+  ```python
   export PATH=/usr/local/cuda-9.0/bin:$PATH
   export LD_LIBRARY_PATH=/usr/local/cuda9.0/lib64:$LD_LIBRARY_PATH
   ```
@@ -52,3 +55,12 @@
     ![1528892397203](assets/1528892397203.png)
 
 * cudnn 7
+
+* Pytorch 0.4.0 
+
+  ```shell
+  $> sudo pip3 install http://download.pytorch.org/whl/cu90/torch-0.4.0-cp35-cp35m-linux_x86_64.whl # maybe use python3 -m pip ...
+  $> sudo pip3 install torchvision
+  ```
+
+  
